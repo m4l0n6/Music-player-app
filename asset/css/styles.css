@@ -1,0 +1,201 @@
+:root {
+    --primary-color: rgba(52,233,227,255);
+    --text-color: #333;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: url('https://images6.alphacoders.com/114/1145423.png') no-repeat fixed center;
+}
+
+html{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.player {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+.player .pause-icon {
+    display: none;
+}
+
+.player.playing .pause-icon {
+    display: inline-block;
+}
+
+.player.playing .play-icon {
+    display: none;
+}
+
+.dashbroad{
+    padding: 16px 16px 14px;
+    background-color: #fff;
+    border-radius: 24px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 16px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.dashbroad .dashbroad-header {
+    text-align: center;
+}
+
+.dashbroad .dashbroad-header h4{
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.dashbroad .dashbroad-header h2{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.cd {
+    display: flex;
+    margin: auto;
+    width: 200px;
+}
+
+.cd-img {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin: auto;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0 8px 0;
+}
+
+.control .btn {
+    color: #666;
+    padding: 18px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.control .btn.active {
+    color: var(--primary-color);
+}
+
+.control .next-btn:active {
+    color: var(--primary-color);
+}
+
+.control .prev-btn:active {
+    color: var(--primary-color);
+}
+
+.control .toggle-play-btn{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+ }
+
+ .progress {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+ }
+ 
+ .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+ }
+
+.playlist {
+    margin-top: 440px;
+    padding: 12px;
+    justify-content: center;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+  
+.song.active {
+    background-color: #5f747e;
+}
+
+.song:active {
+    opacity: 0.8;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+    color: #fff;
+}
+
+.song .song-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+}
+  
+.song .body {
+    flex: 1;
+    padding: 0 16px;
+}
+
+.song .title {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.song .author {
+    font-size: 14px;
+    color: #999;
+}
+
+.song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+}

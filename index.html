@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./asset/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="player">
+        <div class="dashbroad">
+            <header class="dashbroad-header">
+                <h4>Now playing:</h4>
+                <h2></h2>
+            </header>
+
+            <div class="cd">
+                <div class="cd-img"></div>
+            </div>
+
+            <div class="control">
+                <div class="btn reperat-btn">
+                    <i class="fa-solid fa-repeat reperat-icon"></i>
+                </div>
+                <div class="btn prev-btn">
+                    <i class="fa-solid fa-backward-step prev-icon"></i>
+                </div>
+                <div class="btn toggle-play-btn">
+                    <i class="fa-solid fa-play play-icon"></i>
+                    <i class="fa-solid fa-pause pause-icon"></i>
+                </div>
+                <div class="btn next-btn">
+                    <i class="fa-solid fa-forward-step next-icon"></i>
+                </div>
+                <div class="btn random-btn">
+                    <i class="fa-solid fa-shuffle random-icon"></i>
+                </div>
+            </div>
+            <p class="process-min">0:00/0:00</p>
+            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100" title="0:00">
+            
+            <audio src="" id="audio"></audio>
+        </div>
+
+        <div class="playlist">
+
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
