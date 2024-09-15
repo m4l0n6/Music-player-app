@@ -278,7 +278,7 @@ const app = {
         this.definePropertires();
     
         // Sử dụng Web Audio API để xử lý âm thanh
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const audioContext = new (window.AudioContext)();
         const source = audioContext.createMediaElementSource(audio);
         const gainNode = audioContext.createGain();
         const bassFilter = audioContext.createBiquadFilter();
